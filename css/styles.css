@@ -625,7 +625,8 @@ footer {
     color: white;
     padding: 2rem 0;
     width: 100%;
-    margin-top: auto; /* This helps push the footer to the bottom */
+    margin-top: auto;
+    border-top: 4px solid #D72638; /* This helps push the footer to the bottom */
 }
 
 .footer-content {
