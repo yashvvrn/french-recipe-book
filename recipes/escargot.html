@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escargot - Bon Appétit</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bon Appétit</h1>
+                <p class="tagline">The French Way</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#categories">Categories</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <div class="container">
+                <div class="recipe-details-container">
+                    <div class="recipe-header">
+                        <img src="../images/escargot.webp" alt="Escargot" class="recipe-header-image">
+                        <div class="recipe-header-overlay">
+                            <h1>Escargot</h1>
+                            <div class="recipe-info">
+                                <div class="recipe-info-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>45 minutes</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Appetizer</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-user-friends"></i>
+                                    <span>Serves 4</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-description">
+                        <p>Escargot is a quintessential French delicacy featuring snails baked in a rich garlic-herb butter. This elegant appetizer is surprisingly simple to prepare and offers a wonderful introduction to French cuisine. The snails serve as a vehicle for the delicious butter sauce, which is perfect for sopping up with crusty French bread.</p>
+                    </div>
+
+                    <div class="recipe-sections">
+                        <div class="recipe-ingredients">
+                            <h2>Ingredients</h2>
+                            <ul class="ingredients-list">
+                                <li>24 canned snails, drained and rinsed</li>
+                                <li>8 tablespoons unsalted butter, softened</li>
+                                <li>4 cloves garlic, minced</li>
+                                <li>2 tablespoons fresh parsley, finely chopped</li>
+                                <li>1 tablespoon shallot, finely minced</li>
+                                <li>1 teaspoon fresh lemon juice</li>
+                                <li>1/4 teaspoon sea salt</li>
+                                <li>Pinch of freshly ground black pepper</li>
+                                <li>Pinch of nutmeg</li>
+                                <li>1 baguette, sliced, for serving</li>
+                            </ul>
+                        </div>
+
+                        <div class="recipe-preparation">
+                            <h2>Preparation</h2>
+                            <p>This classic French appetizer is all about the garlic-herb butter, which transforms simple snails into a luxurious delicacy. The dish is traditionally served in special escargot dishes, but can also be prepared in a regular baking dish.</p>
+                            
+                            <div class="recipe-tips">
+                                <h3><i class="fas fa-lightbulb"></i> Chef's Tips</h3>
+                                <ul>
+                                    <li>If you don't have escargot dishes, you can use a small baking dish or ramekins.</li>
+                                    <li>Make the garlic-herb butter ahead of time for more developed flavors.</li>
+                                    <li>Serve with small forks or picks to extract the snails from their shells.</li>
+                                    <li>A crusty baguette is essential for soaking up the delicious butter.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-action">
+                        <button id="start-cooking" class="btn">Start Preparing</button>
+                    </div>
+                </div>
+
+                <div class="recipe-steps-container" style="display: none;">
+                    <!-- Step-by-step guide will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Bon Appétit - The French Way</p>
+                <p>Ideated by Yash & Saranya</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCookingBtn = document.getElementById('start-cooking');
+            
+            if (startCookingBtn) {
+                startCookingBtn.addEventListener('click', function() {
+                    // Load the recipe steps and initialize the step-by-step guide
+                    const recipeSteps = loadRecipeSteps('escargot');
+                    initializeRecipeGuide(recipeSteps);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

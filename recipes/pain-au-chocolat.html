@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain au Chocolat - La Cuisine Française</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bon Appétit</h1>
+                <p class="tagline">The French Way</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#categories">Categories</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <div class="container">
+                <div class="recipe-details-container">
+                    <div class="recipe-header">
+                        <img src="../images/pac.webp" alt="Pain au Chocolat" class="recipe-header-image">
+                        <div class="recipe-header-overlay">
+                            <h1>Pain au Chocolat</h1>
+                            <div class="recipe-info">
+                                <div class="recipe-info-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>3 hours + overnight rest</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Pastry</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-user-friends"></i>
+                                    <span>Makes 12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-description">
+                        <p>Pain au Chocolat, also known as Chocolate Croissant, is a delectable French pastry consisting of a rectangle of buttery, flaky croissant dough wrapped around one or two pieces of dark chocolate. This beloved breakfast treat is a staple in French bakeries and cafés, offering the perfect balance of crisp, buttery layers and rich, melting chocolate.</p>
+                    </div>
+
+                    <div class="recipe-sections">
+                        <div class="recipe-ingredients">
+                            <h2>Ingredients</h2>
+                            <ul class="ingredients-list">
+                                <li>500g all-purpose flour</li>
+                                <li>10g salt</li>
+                                <li>55g granulated sugar</li>
+                                <li>10g instant yeast</li>
+                                <li>300ml cold water</li>
+                                <li>250g cold unsalted butter (for lamination)</li>
+                                <li>200g high-quality dark chocolate, cut into batons</li>
+                                <li>1 egg, beaten (for egg wash)</li>
+                                <li>Powdered sugar for dusting (optional)</li>
+                            </ul>
+                        </div>
+
+                        <div class="recipe-preparation">
+                            <h2>Preparation</h2>
+                            <p>Making Pain au Chocolat is a labor of love that requires patience and precision. The process involves creating a laminated dough by folding butter into the dough multiple times to create dozens of alternating layers of butter and dough. When baked, these layers create the signature flaky, honeycomb-like texture that makes this pastry so special.</p>
+                            
+                            <div class="recipe-tips">
+                                <h3><i class="fas fa-lightbulb"></i> Chef's Tips</h3>
+                                <ul>
+                                    <li>Keep all ingredients cold throughout the process to prevent the butter from melting into the dough.</li>
+                                    <li>Allow sufficient resting time between folds to relax the gluten and make rolling easier.</li>
+                                    <li>Use high-quality chocolate that will melt beautifully but still hold its shape.</li>
+                                    <li>For the best rise, proof the pastries until they're visibly puffy before baking.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-action">
+                        <button id="start-cooking" class="btn">Start Preparing</button>
+                    </div>
+                </div>
+
+                <div class="recipe-steps-container" style="display: none;">
+                    <!-- Step-by-step guide will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Bon Appétit - The French Way</p>
+                <p>Ideated by Yash & Saranya</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCookingBtn = document.getElementById('start-cooking');
+            if (startCookingBtn) {
+                startCookingBtn.addEventListener('click', function() {
+                    loadRecipeSteps('pain-au-chocolat');
+                });
+            }
+        });
+
+        function loadRecipeSteps(recipeId) {
+            const recipeSteps = [
+                {
+                    instruction: 'In a large bowl, mix the flour, salt, and sugar. Dissolve the yeast in the cold water, then add to the dry ingredients.',
+                    tip: 'Using cold water slows down the yeast activity, which is ideal for this slow-fermentation dough.'
+                },
+                {
+                    instruction: 'Mix until a dough forms, then knead for about 5 minutes until smooth. The dough should be slightly firm and not sticky.',
+                    tip: 'Don\'t overknead as we want to develop just enough gluten at this stage.'
+                },
+                {
+                    instruction: 'Shape the dough into a rectangle, wrap in plastic wrap, and refrigerate for at least 1 hour.',
+                    tip: 'This resting period allows the gluten to relax and the dough to chill properly.'
+                },
+                {
+                    instruction: 'While the dough is chilling, prepare the butter block. Place the cold butter between two sheets of parchment paper and beat with a rolling pin to form a 7x7 inch square.',
+                    tip: 'The butter should be cold but pliable enough to be shaped without breaking.'
+                },
+                {
+                    instruction: 'Roll the chilled dough into a 10x10 inch square. Place the butter block diagonally on the dough square.',
+                    tip: 'Ensure the butter is the same consistency as the dough - cold but workable.'
+                },
+                {
+                    instruction: 'Fold the corners of the dough over the butter to enclose it completely. Seal the edges well.',
+                    tip: 'This is the beginning of the lamination process that creates the flaky layers.'
+                },
+                {
+                    instruction: 'Roll the dough into a rectangle about 8x24 inches. Fold the bottom third up, then the top third down (like a letter). This is your first "turn."',
+                    tip: 'Keep the edges straight and even for uniform layers.'
+                },
+                {
+                    instruction: 'Wrap the dough and refrigerate for 1 hour. Repeat the rolling and folding process two more times, chilling for 1 hour between each turn.',
+                    tip: 'Chilling between turns prevents the butter from melting into the dough.'
+                },
+                {
+                    instruction: 'After the final turn, refrigerate the dough overnight.',
+                    tip: 'This long rest develops flavor and relaxes the gluten completely.'
+                },
+                {
+                    instruction: 'The next day, roll the dough into a large rectangle about 12x20 inches and about 1/8 inch thick. Trim the edges to make them straight.',
+                    tip: 'Use a ruler for precision and save the trimmings for other uses.'
+                },
+                {
+                    instruction: 'Cut the dough into 12 rectangles, approximately 4x5 inches each.',
+                    tip: 'Measure carefully to ensure all pastries are the same size.'
+                },
+                {
+                    instruction: 'Place a chocolate baton (or two) along the short edge of each rectangle, about 1/2 inch from the edge.',
+                    tip: 'High-quality dark chocolate works best as it holds its shape while baking.'
+                },
+                {
+                    instruction: 'Roll the dough over the chocolate, then continue rolling until the seam is on the bottom.',
+                    tip: 'Roll tightly enough to seal but not so tight that you compress the dough layers.'
+                },
+                {
+                    instruction: 'Place the shaped pastries on parchment-lined baking sheets, leaving space between them. Cover loosely with plastic wrap and let rise at room temperature for 1-2 hours until puffy.',
+                    tip: 'They won\'t double in size but should look visibly expanded.'
+                },
+                {
+                    instruction: 'Preheat the oven to 400°F (200°C). Brush the pastries with beaten egg for a golden finish.',
+                    tip: 'A gentle brush ensures you don\'t deflate the risen dough.'
+                },
+                {
+                    instruction: 'Bake for 15-18 minutes until deeply golden brown and crisp.',
+                    tip: 'Rotate the baking sheets halfway through for even browning.'
+                },
+                {
+                    instruction: 'Allow to cool on a wire rack for at least 10 minutes before serving.',
+                    tip: 'The chocolate inside will be very hot immediately after baking.'
+                },
+                {
+                    instruction: 'If desired, dust with powdered sugar just before serving.',
+                    tip: 'Pain au Chocolat is best enjoyed fresh on the day of baking, preferably still slightly warm.'
+                }
+            ];
+            
+            initializeRecipeGuide(recipeSteps);
+        }
+    </script>
+</body>
+</html>

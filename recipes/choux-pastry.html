@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choux Pastry - La Cuisine Française</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bon Appétit</h1>
+                <p class="tagline">The French Way</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#categories">Categories</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <div class="container">
+                <div class="recipe-details-container">
+                    <div class="recipe-header">
+                        <img src="../images/choux-pastry1.webp" alt="Choux Pastry" class="recipe-header-image">
+                        <div class="recipe-header-overlay">
+    <section class="recipe-detail">
+        <div class="container">
+            <div class="recipe-details-container">
+                <div class="recipe-header">
+                    <img src="../images/choux-pastry1.webp" alt="Choux Pastry" class="recipe-header-image">
+                    <div class="recipe-header-overlay">
+                        <h1>Choux Pastry</h1>
+                        <div class="recipe-info">
+                            <div class="recipe-info-item">
+                                <i class="far fa-clock"></i>
+                                <span>1 hour</span>
+                            </div>
+                            <div class="recipe-info-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Pastry</span>
+                            </div>
+                            <div class="recipe-info-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Makes 20-24 puffs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-description">
+                    <p>Choux pastry (pâte à choux) is a light, airy French pastry dough used to make an impressive array of desserts including éclairs, profiteroles, and cream puffs. The unique twice-cooked method creates steam that causes the pastry to puff dramatically in the oven, forming a hollow center perfect for filling with cream, custard, or other delicious fillings.</p>
+                </div>
+
+                <div class="recipe-sections">
+                    <div class="recipe-ingredients">
+                        <h2>Ingredients</h2>
+                        <ul class="ingredients-list">
+                            <li>1 cup (250ml) water</li>
+                            <li>1/2 cup (115g) unsalted butter</li>
+                            <li>1 tablespoon granulated sugar</li>
+                            <li>1/4 teaspoon salt</li>
+                            <li>1 cup (125g) all-purpose flour, sifted</li>
+                            <li>4 large eggs, at room temperature</li>
+                            <li>1 egg beaten with 1 tablespoon water (for egg wash)</li>
+                            <li>Powdered sugar for dusting (optional)</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-preparation">
+                        <h2>Preparation</h2>
+                        <p>Choux pastry requires precision in technique but uses simple ingredients. The dough is first cooked on the stovetop, then eggs are incorporated to create a glossy, pipeable mixture. When baked, the high moisture content creates steam that puffs the pastry, resulting in a crisp exterior and hollow interior.</p>
+                        
+                        <div class="recipe-tips">
+                            <h3><i class="fas fa-lightbulb"></i> Chef's Tips</h3>
+                            <ul>
+                                <li>Ensure all ingredients are measured precisely for the best results.</li>
+                                <li>The dough should be the right consistency - thick enough to hold its shape when piped but not too stiff.</li>
+                                <li>Don't open the oven door during the first 25 minutes of baking to prevent the pastry from collapsing.</li>
+                                <li>Pierce each pastry with a small hole after baking to allow steam to escape and prevent sogginess.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-action">
+                    <button id="start-cooking" class="btn">Start Preparing</button>
+                </div>
+            </div>
+
+            <div class="recipe-steps-container" style="display: none;">
+                <!-- Step-by-step guide will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Bon Appétit - The French Way</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCookingBtn = document.getElementById('start-cooking');
+            if (startCookingBtn) {
+                startCookingBtn.addEventListener('click', function() {
+                    loadRecipeSteps('choux-pastry');
+                });
+            }
+        });
+
+        function loadRecipeSteps(recipeId) {
+            const recipeSteps = [
+                {
+                    instruction: 'Preheat your oven to 400°F (200°C). Line two baking sheets with parchment paper.',
+                    tip: 'Proper preheating is essential for the initial rise of the choux pastry.'
+                },
+                {
+                    instruction: 'In a medium saucepan, combine water, butter, sugar, and salt. Bring to a boil over medium-high heat.',
+                    tip: 'Make sure the butter is completely melted before the mixture comes to a boil.'
+                },
+                {
+                    instruction: 'Once boiling, remove from heat and immediately add all the flour at once. Stir vigorously with a wooden spoon until the mixture forms a ball and pulls away from the sides of the pan.',
+                    tip: 'This step requires quick action - the flour must be incorporated while the mixture is still hot.'
+                },
+                {
+                    instruction: 'Return the pan to low heat and continue stirring for about 1-2 minutes to dry out the dough slightly.',
+                    tip: 'You\'ll know it\'s ready when a thin film forms on the bottom of the pan.'
+                },
+                {
+                    instruction: 'Transfer the dough to a mixing bowl and let it cool for about 5 minutes.',
+                    tip: 'The dough needs to cool slightly so the eggs won\'t cook when added.'
+                },
+                {
+                    instruction: 'Add the eggs one at a time, beating thoroughly after each addition until the dough is smooth and glossy.',
+                    tip: 'The dough may look separated at first, but keep beating and it will come together.'
+                },
+                {
+                    instruction: 'Test the dough by lifting the spoon - the dough should form a V-shape as it falls, but still hold its shape when piped.',
+                    tip: 'If the dough is too stiff, beat in a little more egg. If it\'s too runny, it won\'t hold its shape.'
+                },
+                {
+                    instruction: 'Transfer the dough to a piping bag fitted with a large round tip (or use a zip-top bag with the corner cut off).',
+                    tip: 'Don\'t fill the bag more than two-thirds full for easier handling.'
+                },
+                {
+                    instruction: 'For cream puffs, pipe 1.5-inch rounds onto the prepared baking sheets, leaving 2 inches between each puff.',
+                    tip: 'Pipe straight down and finish with a quick twist of the wrist to prevent peaks.'
+                },
+                {
+                    instruction: 'For éclairs, pipe 4-inch long strips.',
+                    tip: 'Keep the pressure steady as you pipe for uniform thickness.'
+                },
+                {
+                    instruction: 'Smooth any peaks with a wet fingertip.',
+                    tip: 'This prevents the peaks from burning during baking.'
+                },
+                {
+                    instruction: 'Brush the tops lightly with egg wash.',
+                    tip: 'The egg wash gives the pastry a beautiful golden color.'
+                },
+                {
+                    instruction: 'Bake for 25 minutes, then reduce the oven temperature to 350°F (175°C) and bake for another 10-15 minutes until golden brown and firm.',
+                    tip: 'Do not open the oven door during the first 25 minutes of baking.'
+                },
+                {
+                    instruction: 'Turn off the oven, crack the door open, and let the pastries dry out for 10 minutes.',
+                    tip: 'This extra step helps ensure the pastries are crisp and not soggy.'
+                },
+                {
+                    instruction: 'Remove from the oven and immediately pierce each pastry with a small knife to allow steam to escape.',
+                    tip: 'This prevents the pastry from becoming soggy as it cools.'
+                },
+                {
+                    instruction: 'Let cool completely on a wire rack before filling.',
+                    tip: 'The pastries must be completely cool before filling to prevent the filling from melting.'
+                },
+                {
+                    instruction: 'Fill with pastry cream, whipped cream, or your favorite filling using a piping bag.',
+                    tip: 'For cream puffs, you can either pipe filling through the hole or cut them in half and fill.'
+                },
+                {
+                    instruction: 'Dust with powdered sugar or top with chocolate ganache if desired.',
+                    tip: 'For a professional finish, dust with powdered sugar just before serving.'
+                }
+            ];
+            
+            initializeRecipeGuide(recipeSteps);
+        }
+    </script>
+</body>
+</html>

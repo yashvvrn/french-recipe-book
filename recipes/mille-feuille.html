@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mille-Feuille - La Cuisine Française</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bon Appétit</h1>
+                <p class="tagline">The French Way</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#categories">Categories</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <div class="container">
+                <div class="recipe-details-container">
+                    <div class="recipe-header">
+                        <img src="../images/Mille-Feuille1.webp" alt="Mille-Feuille" class="recipe-header-image">
+                        <div class="recipe-header-overlay">
+                            <h1>Mille-Feuille</h1>
+                            <div class="recipe-info">
+                                <div class="recipe-info-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>2 hours + chilling time</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Pastry</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-user-friends"></i>
+                                    <span>Serves 8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-description">
+                        <p>Mille-Feuille, meaning "thousand leaves," is an exquisite French pastry made of three layers of puff pastry alternating with two layers of rich pastry cream. The top is typically glazed with icing and decorated with a distinctive pattern of chocolate feathering. This elegant dessert is known for its delicate, crisp layers and luscious vanilla cream filling.</p>
+                    </div>
+
+                    <div class="recipe-sections">
+                        <div class="recipe-ingredients">
+                            <h2>Ingredients</h2>
+                            <ul class="ingredients-list">
+                                <li>1 package (500g) all-butter puff pastry, thawed if frozen</li>
+                                <li>2 cups whole milk</li>
+                                <li>1 vanilla bean, split lengthwise (or 2 tsp vanilla extract)</li>
+                                <li>6 large egg yolks</li>
+                                <li>2/3 cup granulated sugar</li>
+                                <li>1/3 cup cornstarch</li>
+                                <li>3 tbsp unsalted butter, at room temperature</li>
+                                <li>1 cup powdered sugar</li>
+                                <li>2 tbsp water</li>
+                                <li>2 oz dark chocolate, melted</li>
+                                <li>Fresh berries for garnish (optional)</li>
+                            </ul>
+                        </div>
+
+                        <div class="recipe-preparation">
+                            <h2>Preparation</h2>
+                            <p>Creating a perfect Mille-Feuille requires attention to detail and patience. The puff pastry must be baked until golden and crisp, while the pastry cream should be smooth and rich. Assembly requires a gentle touch to prevent crushing the delicate layers.</p>
+                            
+                            <div class="recipe-tips">
+                                <h3><i class="fas fa-lightbulb"></i> Chef's Tips</h3>
+                                <ul>
+                                    <li>Chill the pastry cream thoroughly before assembling to ensure it holds its shape.</li>
+                                    <li>Use a serrated knife with a gentle sawing motion to cut the finished pastry without crushing the layers.</li>
+                                    <li>For the classic feathered pattern, draw lines of melted chocolate across the white icing, then drag a toothpick perpendicular to create the design.</li>
+                                    <li>Assemble the Mille-Feuille no more than 4 hours before serving to maintain the crisp texture of the pastry.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-action">
+                        <button id="start-cooking" class="btn">Start Preparing</button>
+                    </div>
+                </div>
+
+                <div class="recipe-steps-container" style="display: none;">
+                    <!-- Step-by-step guide will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Bon Appétit - The French Way</p>
+                <p>Ideated by Yash & Saranya</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCookingBtn = document.getElementById('start-cooking');
+            if (startCookingBtn) {
+                startCookingBtn.addEventListener('click', function() {
+                    loadRecipeSteps('mille-feuille');
+                });
+            }
+        });
+
+        function loadRecipeSteps(recipeId) {
+            const recipeSteps = [
+                {
+                    instruction: 'Preheat the oven to 400°F (200°C). Line two baking sheets with parchment paper.',
+                    tip: 'Make sure your oven is fully preheated for the best puff pastry rise.'
+                },
+                {
+                    instruction: 'Roll out the puff pastry on a lightly floured surface to about 1/8 inch thickness. Cut into three equal rectangles.',
+                    tip: 'Use a ruler to ensure all pieces are exactly the same size.'
+                },
+                {
+                    instruction: 'Place the pastry rectangles on the prepared baking sheets. Cover with another sheet of parchment paper and place a second baking sheet on top to prevent excessive rising.',
+                    tip: 'This technique keeps the pastry flat while still allowing it to develop layers.'
+                },
+                {
+                    instruction: 'Bake for 15-18 minutes until golden brown and crisp. Remove the top baking sheet for the last 5 minutes to ensure even browning.',
+                    tip: 'The pastry should be deeply golden and completely dry.'
+                },
+                {
+                    instruction: 'Allow the pastry sheets to cool completely on a wire rack.',
+                    tip: 'Any residual heat or moisture will make the pastry soggy.'
+                },
+                {
+                    instruction: 'For the pastry cream, heat the milk with the vanilla bean (if using) in a saucepan until just below boiling point.',
+                    tip: 'Infusing the milk with vanilla creates a more aromatic cream.'
+                },
+                {
+                    instruction: 'In a bowl, whisk together the egg yolks, sugar, and cornstarch until pale and thick.',
+                    tip: 'Whisking thoroughly at this stage prevents lumps in your pastry cream.'
+                },
+                {
+                    instruction: 'Gradually pour the hot milk into the egg mixture, whisking constantly.',
+                    tip: 'Add the milk slowly to temper the eggs and prevent them from scrambling.'
+                },
+                {
+                    instruction: 'Return the mixture to the saucepan and cook over medium heat, stirring constantly, until thickened.',
+                    tip: 'The cream is ready when it coats the back of a spoon and a finger drawn through leaves a clear path.'
+                },
+                {
+                    instruction: 'Remove from heat, stir in the butter and vanilla extract (if using instead of the bean). Transfer to a bowl, cover with plastic wrap directly on the surface, and refrigerate until cold.',
+                    tip: 'Placing the plastic wrap directly on the surface prevents a skin from forming.'
+                },
+                {
+                    instruction: 'For the icing, mix the powdered sugar with water to create a smooth, thick glaze.',
+                    tip: 'The glaze should be thick enough to coat the back of a spoon but still pourable.'
+                },
+                {
+                    instruction: 'To assemble, place one pastry sheet on a serving platter. Spread half the pastry cream evenly over it.',
+                    tip: 'Leave a small border around the edges for a neater finish.'
+                },
+                {
+                    instruction: 'Top with the second pastry sheet and spread with the remaining pastry cream.',
+                    tip: 'Press down very gently to secure the layers.'
+                },
+                {
+                    instruction: 'Place the final pastry sheet on top and gently press down.',
+                    tip: 'This top layer will be decorated with the icing.'
+                },
+                {
+                    instruction: 'Spread the white icing evenly over the top pastry layer.',
+                    tip: 'Work quickly as the icing will begin to set.'
+                },
+                {
+                    instruction: 'While the icing is still wet, pipe or drizzle thin lines of melted chocolate across the surface at 1-inch intervals.',
+                    tip: 'Use a piping bag with a very small tip for precise lines.'
+                },
+                {
+                    instruction: 'Using a toothpick or the tip of a knife, drag through the chocolate lines perpendicular to them, alternating directions to create the classic feathered pattern.',
+                    tip: 'Wipe the toothpick clean after each drag for the cleanest lines.'
+                },
+                {
+                    instruction: 'Refrigerate for at least 1 hour to set the icing and firm up the pastry cream.',
+                    tip: 'This makes the Mille-Feuille easier to cut cleanly.'
+                },
+                {
+                    instruction: 'Using a serrated knife, carefully cut into portions. Garnish with fresh berries if desired.',
+                    tip: 'For the cleanest cut, dip the knife in hot water and wipe dry between each slice.'
+                }
+            ];
+            
+            initializeRecipeGuide(recipeSteps);
+        }
+    </script>
+</body>
+</html>

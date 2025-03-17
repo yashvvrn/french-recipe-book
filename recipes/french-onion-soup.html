@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Onion Soup - Bon Appétit</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bon Appétit</h1>
+                <p class="tagline">The French Way</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#categories">Categories</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <div class="container">
+                <div class="recipe-details-container">
+                    <div class="recipe-header">
+                        <img src="../images/french-onion-soup.webp" alt="French Onion Soup" class="recipe-header-image">
+                        <div class="recipe-header-overlay">
+                            <h1>French Onion Soup</h1>
+                            <div class="recipe-info">
+                                <div class="recipe-info-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>60 minutes</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Appetizer</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-user-friends"></i>
+                                    <span>Serves 4</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-description">
+                        <p>French Onion Soup is a timeless classic featuring caramelized onions simmered in a rich beef broth, topped with crusty bread and melted Gruyère cheese. This hearty appetizer combines sweet, savory, and umami flavors in a comforting bowl that's perfect for starting a French meal or enjoying on a cold evening.</p>
+                    </div>
+
+                    <div class="recipe-sections">
+                        <div class="recipe-ingredients">
+                            <h2>Ingredients</h2>
+                            <ul class="ingredients-list">
+                                <li>4 large yellow onions, thinly sliced</li>
+                                <li>3 tablespoons butter</li>
+                                <li>1 tablespoon olive oil</li>
+                                <li>1 teaspoon sugar</li>
+                                <li>2 cloves garlic, minced</li>
+                                <li>1 tablespoon all-purpose flour</li>
+                                <li>1/2 cup dry white wine</li>
+                                <li>6 cups beef stock</li>
+                                <li>2 bay leaves</li>
+                                <li>2 sprigs fresh thyme</li>
+                                <li>1 baguette, sliced into rounds</li>
+                                <li>2 cups grated Gruyère cheese</li>
+                                <li>Salt and freshly ground black pepper to taste</li>
+                                <li>1 tablespoon cognac (optional)</li>
+                            </ul>
+                        </div>
+
+                        <div class="recipe-preparation">
+                            <h2>Preparation</h2>
+                            <p>This classic French soup requires patience to properly caramelize the onions, which is the key to its deep, rich flavor. The slow cooking process transforms simple ingredients into a luxurious appetizer that's well worth the effort.</p>
+                            
+                            <div class="recipe-tips">
+                                <h3><i class="fas fa-lightbulb"></i> Chef's Tips</h3>
+                                <ul>
+                                    <li>Take your time caramelizing the onions - this is where the flavor develops.</li>
+                                    <li>Use homemade beef stock if possible for the richest flavor.</li>
+                                    <li>Traditional Gruyère cheese works best, but Emmental or Swiss can substitute.</li>
+                                    <li>Toast the baguette slices before adding them to the soup to prevent sogginess.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-action">
+                        <button id="start-cooking" class="btn">Start Preparing</button>
+                    </div>
+                </div>
+
+                <div class="recipe-steps-container" style="display: none;">
+                    <!-- Step-by-step guide will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Bon Appétit - The French Way</p>
+                <p>Ideated by Yash & Saranya</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCookingBtn = document.getElementById('start-cooking');
+            
+            if (startCookingBtn) {
+                startCookingBtn.addEventListener('click', function() {
+                    // Load the recipe steps and initialize the step-by-step guide
+                    const recipeSteps = loadRecipeSteps('french-onion-soup');
+                    initializeRecipeGuide(recipeSteps);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

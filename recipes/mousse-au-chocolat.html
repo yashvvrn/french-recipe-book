@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousse au Chocolat - La Cuisine Française</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bon Appétit</h1>
+                <p class="tagline">The French Way</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#categories">Categories</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="recipe-detail">
+        <div class="container">
+            <div class="recipe-details-container">
+                <div class="recipe-header">
+                    <img src="../images/mac1.webp" alt="Mousse au Chocolat" class="recipe-header-image">
+                    <div class="recipe-header-overlay">
+                        <h1>Mousse au Chocolat</h1>
+                        <div class="recipe-info">
+                            <div class="recipe-info-item">
+                                <i class="far fa-clock"></i>
+                                <span>30 minutes + 4 hours chilling</span>
+                            </div>
+                            <div class="recipe-info-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Dessert</span>
+                            </div>
+                            <div class="recipe-info-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Serves 6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-description">
+                    <p>Mousse au Chocolat is a classic French dessert that epitomizes elegance and simplicity. This airy, silky chocolate mousse is made with just a few high-quality ingredients, resulting in a luxurious dessert that's both rich and light. Perfect for dinner parties or a special treat, this timeless French classic never fails to impress.</p>
+                </div>
+
+                <div class="recipe-sections">
+                    <div class="recipe-ingredients">
+                        <h2>Ingredients</h2>
+                        <ul class="ingredients-list">
+                            <li>200g high-quality dark chocolate (70% cocoa), chopped</li>
+                            <li>6 large eggs, separated</li>
+                            <li>30g unsalted butter</li>
+                            <li>Pinch of salt</li>
+                            <li>50g granulated sugar</li>
+                            <li>1 tsp vanilla extract</li>
+                            <li>Fresh berries and mint leaves for garnish</li>
+                            <li>Whipped cream for serving (optional)</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-preparation">
+                        <h2>Preparation</h2>
+                        <p>This classic French chocolate mousse relies on perfectly whipped egg whites folded into a rich chocolate base for its signature texture. The mousse needs to chill for several hours to set properly, making it an ideal make-ahead dessert for entertaining.</p>
+                        
+                        <div class="recipe-tips">
+                            <h3><i class="fas fa-lightbulb"></i> Chef's Tips</h3>
+                            <ul>
+                                <li>Use the highest quality chocolate you can find for the best flavor.</li>
+                                <li>Ensure your bowl is completely clean and dry when whipping egg whites.</li>
+                                <li>Fold the chocolate mixture and egg whites together gently to maintain the air bubbles.</li>
+                                <li>For a more intense chocolate flavor, use 85% dark chocolate.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-action">
+                    <button id="start-cooking" class="btn">Start Preparing</button>
+                </div>
+            </div>
+
+            <div class="recipe-steps-container" style="display: none;">
+                <!-- Step-by-step guide will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Bon Appétit - The French Way</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCookingBtn = document.getElementById('start-cooking');
+            if (startCookingBtn) {
+                startCookingBtn.addEventListener('click', function() {
+                    loadRecipeSteps('mousse-au-chocolat');
+                });
+            }
+        });
+
+        function loadRecipeSteps(recipeId) {
+            const recipeSteps = [
+                {
+                    instruction: 'Melt the chocolate and butter together in a heatproof bowl set over a pan of simmering water (don\'t let the bowl touch the water).',
+                    tip: 'Stir occasionally to ensure even melting and prevent burning.'
+                },
+                {
+                    instruction: 'Once melted, remove from heat and let cool slightly for about 5 minutes.',
+                    tip: 'The chocolate should be warm but not hot when you add the egg yolks.'
+                },
+                {
+                    instruction: 'Add the egg yolks one at a time to the chocolate mixture, stirring well after each addition.',
+                    tip: 'Make sure each yolk is fully incorporated before adding the next one.'
+                },
+                {
+                    instruction: 'Add the vanilla extract and stir to combine.',
+                    tip: 'Pure vanilla extract gives the best flavor.'
+                },
+                {
+                    instruction: 'In a clean, dry bowl, whip the egg whites with a pinch of salt until they form soft peaks.',
+                    tip: 'Make sure your bowl and beaters are completely free of grease or the whites won\'t whip properly.'
+                },
+                {
+                    instruction: 'Gradually add the sugar while continuing to whip until the whites form stiff, glossy peaks.',
+                    tip: 'The egg whites should be firm enough that they don\'t fall out if you turn the bowl upside down.'
+                },
+                {
+                    instruction: 'Gently fold one-third of the whipped egg whites into the chocolate mixture to lighten it.',
+                    tip: 'This first addition doesn\'t need to be perfectly folded in.'
+                },
+                {
+                    instruction: 'Fold in the remaining egg whites very gently until just combined, with no white streaks visible.',
+                    tip: 'Use a cutting and folding motion to preserve as much air as possible.'
+                },
+                {
+                    instruction: 'Divide the mousse into individual serving glasses or ramekins.',
+                    tip: 'For an elegant presentation, use clear glasses to show off the beautiful texture.'
+                },
+                {
+                    instruction: 'Refrigerate for at least 4 hours, or preferably overnight, until set.',
+                    tip: 'Cover with plastic wrap if chilling overnight to prevent the mousse from absorbing other flavors.'
+                },
+                {
+                    instruction: 'Before serving, garnish with fresh berries, mint leaves, and a dollop of whipped cream if desired.',
+                    tip: 'The tartness of berries complements the rich chocolate perfectly.'
+                }
+            ];
+            
+            initializeRecipeGuide(recipeSteps);
+        }
+    </script>
+</body>
+</html>

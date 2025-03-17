@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coq au Vin - La Cuisine Française</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bon Appétit</h1>
+                <p class="tagline">The French Way</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#categories">Categories</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <div class="container">
+                <div class="recipe-details-container">
+                    <div class="recipe-header">
+                        <img src="../images/coq-au-vin1.webp" alt="Coq au Vin" class="recipe-header-image">
+                        <div class="recipe-header-overlay">
+                            <h1>Coq au Vin</h1>
+                            <div class="recipe-info">
+                                <div class="recipe-info-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>90 minutes</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Main Course</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-user-friends"></i>
+                                    <span>Serves 4-6</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-description">
+                        <p>Coq au Vin is a classic French dish where chicken is braised in red wine with mushrooms, onions, and bacon, infused with herbs like thyme and bay leaves. This rustic yet elegant dish exemplifies French country cooking at its finest, transforming simple ingredients into a rich, complex meal that's perfect for a special dinner.</p>
+                    </div>
+
+                    <div class="recipe-sections">
+                        <div class="recipe-ingredients">
+                            <h2>Ingredients</h2>
+                            <ul class="ingredients-list">
+                                <li>8 bone-in, skin-on chicken thighs</li>
+                                <li>6 oz bacon, diced</li>
+                                <li>2 cups red wine (Burgundy preferred)</li>
+                                <li>1 cup chicken broth</li>
+                                <li>1 large onion, diced</li>
+                                <li>2 carrots, sliced</li>
+                                <li>2 cloves garlic, minced</li>
+                                <li>8 oz mushrooms, quartered</li>
+                                <li>2 tbsp tomato paste</li>
+                                <li>2 tbsp butter</li>
+                                <li>2 tbsp all-purpose flour</li>
+                                <li>4 sprigs fresh thyme</li>
+                                <li>1 bay leaf</li>
+                                <li>Salt and pepper to taste</li>
+                                <li>Fresh parsley for garnish</li>
+                            </ul>
+                        </div>
+
+                        <div class="recipe-preparation">
+                            <h2>Preparation</h2>
+                            <p>This classic French dish requires several steps but is well worth the effort. You'll start by browning the bacon and chicken, then building layers of flavor with vegetables, wine, and herbs. The dish simmers slowly, allowing all the flavors to meld together into a rich, complex sauce.</p>
+                            
+                            <div class="recipe-tips">
+                                <h3><i class="fas fa-lightbulb"></i> Chef's Tips</h3>
+                                <ul>
+                                    <li>Marinate the chicken in the wine overnight for even more flavor.</li>
+                                    <li>Use a good quality wine that you would enjoy drinking.</li>
+                                    <li>For the most authentic flavor, use a Burgundy wine.</li>
+                                    <li>Serve with crusty French bread or over mashed potatoes to soak up the delicious sauce.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-action">
+                        <button id="start-cooking" class="btn">Start Preparing</button>
+                    </div>
+                </div>
+
+                <div class="recipe-steps-container" style="display: none;">
+                    <!-- Step-by-step guide will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Bon Appétit - The French Way</p>
+                <p>Ideated by Yash & Saranya</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCookingBtn = document.getElementById('start-cooking');
+            
+            if (startCookingBtn) {
+                startCookingBtn.addEventListener('click', function() {
+                    // Load the recipe steps and initialize the step-by-step guide
+                    const recipeSteps = loadRecipeSteps('coq-au-vin');
+                    initializeRecipeGuide(recipeSteps);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

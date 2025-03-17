@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarte Tatin - La Cuisine Française</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bon Appétit</h1>
+                <p class="tagline">The French Way</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#categories">Categories</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <div class="container">
+                <div class="recipe-details-container">
+                    <div class="recipe-header">
+                        <img src="../images/tt1.webp" alt="Tarte Tatin" class="recipe-header-image">
+                        <div class="recipe-header-overlay">
+                            <h1>Tarte Tatin</h1>
+                            <div class="recipe-info">
+                                <div class="recipe-info-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>45 minutes</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Dessert</span>
+                                </div>
+                                <div class="recipe-info-item">
+                                    <i class="fas fa-user-friends"></i>
+                                    <span>Serves 8</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-description">
+                        <p>Tarte Tatin is a classic French upside-down caramelized apple tart with a buttery pastry crust. This elegant dessert balances sweet and tart flavors beautifully, with tender caramelized apples atop a crisp, flaky crust. Originally created by accident at the Hotel Tatin in the 1880s, this dessert has become a beloved staple of French cuisine.</p>
+                    </div>
+
+                    <div class="recipe-sections">
+                        <div class="recipe-ingredients">
+                            <h2>Ingredients</h2>
+                            <ul class="ingredients-list">
+                                <li>6-8 firm apples (Granny Smith or Honeycrisp)</li>
+                                <li>1 sheet puff pastry, thawed</li>
+                                <li>3/4 cup granulated sugar</li>
+                                <li>6 tablespoons unsalted butter</li>
+                                <li>1 teaspoon vanilla extract</li>
+                                <li>1/4 teaspoon cinnamon</li>
+                                <li>Pinch of salt</li>
+                                <li>1 tablespoon lemon juice</li>
+                                <li>Vanilla ice cream or crème fraîche for serving</li>
+                            </ul>
+                        </div>
+
+                        <div class="recipe-preparation">
+                            <h2>Preparation</h2>
+                            <p>Tarte Tatin is a beautiful dessert that requires careful caramelization of the apples before being topped with pastry and baked upside down. The magic happens when you flip the tart after baking, revealing the beautifully arranged caramelized apples on top of the golden pastry.</p>
+                            
+                            <div class="recipe-tips">
+                                <h3><i class="fas fa-lightbulb"></i> Chef's Tips</h3>
+                                <ul>
+                                    <li>Choose firm apples that will hold their shape during cooking.</li>
+                                    <li>Watch the caramel carefully as it can burn quickly.</li>
+                                    <li>Let the tart cool for 10 minutes before inverting to prevent the caramel from being too runny.</li>
+                                    <li>Serve warm with a scoop of vanilla ice cream or a dollop of crème fraîche.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-action">
+                        <button id="start-cooking" class="btn">Start Preparing</button>
+                    </div>
+                </div>
+
+                <div class="recipe-steps-container" style="display: none;">
+                    <!-- Step-by-step guide will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Bon Appétit - The French Way</p>
+                <p>Ideated by Yash & Saranya</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startCookingBtn = document.getElementById('start-cooking');
+            
+            if (startCookingBtn) {
+                startCookingBtn.addEventListener('click', function() {
+                    // Load the recipe steps and initialize the step-by-step guide
+                    const recipeSteps = loadRecipeSteps('tarte-tatin');
+                    initializeRecipeGuide(recipeSteps);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
